@@ -1,0 +1,57 @@
+/*
+AUTHOR
+Ben Alexander, Student Worker, 2023
+
+Boilerplate styles for cuit_accordion module.
+
+*/
+
+.collapsible {
+  border-style: double;
+  border-width: 7px;
+  border-color: #aaa;
+  padding: .4em;
+}
+
+.collapsible-closed, .collapsible-open {
+  cursor: pointer;
+}
+
+.collapsible > * {
+  padding: .5em;
+}
+
+.collapsible-closed::before {
+  content: '\f106';
+}
+
+.collapsible-open::before {
+  content: '\f107';
+}
+
+.collapsible-open::before, .collapsible-closed::before {
+  font-family: "Font Awesome 5 Brands","Font Awesome 5 Free";
+  font-size: 1.5rem;
+  float: right;
+  padding-left: 17px;
+  padding-right: 17px;
+  min-height: 2.75rem;
+  right: 0rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  transition-duration: .5s;
+  transition-property: background-color,color,top;
+  transition-timing-function: ease-in-out;
+  margin: -.3em;
+}
+
+.collapsible-open:hover:before, .collapsible-closed:hover:before{
+  background-color: #62A8E5;
+  color: white;
+  border-radius: 50%;
+  transition-duration: .5s;
+  transition-property: background-color,color,top;
+  transition-timing-function: ease-in-out;
+
+}

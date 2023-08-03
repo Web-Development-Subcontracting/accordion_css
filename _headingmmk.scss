@@ -1,0 +1,58 @@
+/*
+AUTHOR
+Ben Alexander, Student Worker
+2023
+
+Heading mimickers.
+These styles can be applied to change an individual heading's size and appearance in CKEditor.
+
+In admin/config/content/wysiwyg add to the CSS of each text format:
+
+Very Large=span.very-large
+Large=span.large
+Large Italic=span.large-italic
+Medium=span.medium
+Medium Italic=span.medium-italic
+Small=span.small
+Small Italic=span.small-italic
+Very Small=span.very-small 
+
+
+*/
+
+$font-size-h2:2rem;
+$font-size-h3:1.5rem;
+$font-size-h4:1.25rem;
+$font-size-h5:1rem;
+$font-size-h6:.75rem;
+
+//styles to match headings
+span.very-large, span.large, span.medium, span.small, span.very-small, span.small-italic,
+span.medium-italic, span.large-italic {
+  font-weight: 700;
+  font-family: "franklin-gothic-urw-comp", sans-serif;
+}
+
+span.very-large {
+  font-size: $font-size-h2;
+}
+
+span.large, span.large-italic {
+  font-size: $font-size-h3;
+}
+
+span.medium, span.medium-italic {
+  font-size: $font-size-h4;
+}
+
+span.small, span.small-italic {
+  font-size: $font-size-h5;
+}
+
+span.very-small {
+  font-size: $font-size-h6;
+}
+
+span.small-italic, span.medium-italic, span.large-italic {
+  font-style: italic;
+}
