@@ -10,7 +10,7 @@ Do not import this into style.scss
 .collapsible {
   border-radius: 1;
   border-style: dotted;
-  border-color: red;
+  border-color: orange;
   padding: 1em;
 }
 
@@ -29,4 +29,9 @@ Do not import this into style.scss
   float: right;
   border: solid 0.2rem;
   border-radius: 50%;
+}
+.collapsible-content {
+  p {
+    min-height: 10px;
+  }
 }
