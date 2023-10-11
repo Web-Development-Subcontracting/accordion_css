@@ -1,37 +1,37 @@
 /*
 AUTHOR
-Ben Alexander, Student Worker, 2023
+Ben Alexander, 2023
 
 These are the styles to dispaly accordion effect ONLY inside the editor.
 Do not import this into style.scss
 
 */
 
-.collapsible {
-  border-radius: 1;
-  border-style: dotted;
-  border-color: orange;
-  padding: 1em;
+.collapsible-cc {
+    border-radius: 1;
+    border-style: dotted;
+    border-color: orange;
+    padding: 1em;
 }
 
-.collapsible > *:first-child{
-  border-bottom: dotted 0.2rem;
-  border-color: gray;
-  padding: 1rem;
+.collapsible-cc > *:first-child{
+    border-bottom: dotted 0.2rem;
+    border-color: gray;
+    padding: 1rem;
 }
 
-.collapsible::before {
-  content : '\00A0\00A0v\00A0\00A0';
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: bold;
-  font-size: 1em;
-  padding: 0.3rem;
-  float: right;
-  border: solid 0.2rem;
-  border-radius: 50%;
+.collapsible-cc::before {
+content : '\00A0\00A0v\00A0\00A0';
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: bold;
+    font-size: 1em;
+    padding: 0.3rem;
+    float: right;
+    border: solid 0.2rem;
+    border-radius: 50%;
 }
-.collapsible-content {
-  p {
-    min-height: 10px;
-  }
+.collapsible-content-cc {
+    p {
+        min-height: 10px;
+    }
 }
