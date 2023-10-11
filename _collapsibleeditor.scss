@@ -1,37 +1,66 @@
-/*
-AUTHOR
-Ben Alexander, 2023
-
-These are the styles to dispaly accordion effect ONLY inside the editor.
-Do not import this into style.scss
-
-*/
-
-.collapsible-cc {
-    border-radius: 1;
-    border-style: dotted;
-    border-color: orange;
-    padding: 1em;
-}
-
-.collapsible-cc > *:first-child{
-    border-bottom: dotted 0.2rem;
-    border-color: gray;
-    padding: 1rem;
-}
-
-.collapsible-cc::before {
-content : '\00A0\00A0v\00A0\00A0';
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: bold;
-    font-size: 1em;
-    padding: 0.3rem;
-    float: right;
-    border: solid 0.2rem;
-    border-radius: 50%;
-}
-.collapsible-content-cc {
-    p {
-        min-height: 10px;
+// collapsible areas
+.collapsible-open-cc, .collapsible-closed-cc {
+    background-color:transparent;
+    border-bottom-color:transparent;
+    cursor:pointer;
+    position:relative;
+    > * {
+      height:200em;
     }
+    padding: 1rem;
+    position: relative;
+    &:hover {
+        color:#949481;
+    }
+    &:after {
+      margin-right: .75em;
+      content:"❯";
+      right: 0;
+      position: absolute;
+      transition: transform .5s;
+    }
+    transition: border-color .5s;
+}
+
+.collapsible-open-cc,
+.collapsible-closed-cc {
+    margin-bottom: 0 !important;
+    padding: 1rem !important;
+    border-bottom: solid thin;
+}
+.collapsible-cc {
+    margin-bottom: 1rem;
+  p{
+    margin-left:1rem;
+    margin-right:1rem;
+  }
+  .open p{
+    margin-bottom:1rem;
+  }
+}
+
+.collapsible-closed-cc {
+    border-color:rgba(0, 0, 0, .0) !important;
+}
+.collapsible-open-cc {
+  &:after {
+    transform: rotate(90deg);
+  }
+  border-color:rgba(0, 0, 0, 1) !important;
+}
+
+.collapsible-content-cc {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s, padding-top .5s;
+    &.open, &.transition-open-cc {
+      padding-top: 1em;
+    }
+}
+
+div.collapsible-cc {
+  border:1px solid rgba(0, 0, 0, 0.16);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  min-height:0.3rem;
+  margin: 1rem;
 }
